@@ -1,20 +1,74 @@
 # AngularBaseTemplate
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
+<!-- ABOUT THE PROJECT -->
+## About The Project
+This project is a template for starter kit angular project including `Layout structure` , `Makefile` , `Dockerfile` , `Commitlint`  
 
-## Development server
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+### Built With
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This section list frameworks/libraries used to in project.
 
-## Build
+* [Angular](https://angular.io/) version 14.0.4
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-# Project Layout Structure
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+### Prerequisites
+
+To use the Angular framework, you should be familiar with the following:
+* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+* [HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML)
+* [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps)
+* [Node.js](https://nodejs.org/en/)
+* [npm](https://docs.npmjs.com/about-npm)
+
+Knowledge of TypeScript is helpful, but not required.
+
+### Installation
+
+_You use the Angular CLI to create projects, generate application and library code, and perform a variety of ongoing development tasks such as testing, bundling, and deployment._
+
+To install the Angular CLI, open a terminal window and run the following command
+```sh
+npm install -g @angular/cli
+```
+
+_If you already installed Angular CLI, Next step you must be install all libraries to used in this project._
+
+To install all libraries, open a terminal window and run the following command
+```sh
+npm install
+```
+<b>Or install by [Makefile](https://makefiletutorial.com/) command</b>
+```sh
+make install
+```
+
+_If you want to run application._
+
+To run application, open a terminal window and run the following command
+```sh
+ng serve
+```
+<b>Or run by npm command</b>
+```sh
+npm run start
+```
+<b>Or run by [Makefile](https://makefiletutorial.com/) command</b>
+```sh
+make run
+```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+### Project Layout Structure
 ```
   ∇ app
     ∇ core
@@ -95,3 +149,4 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
             custom-icon-b.svg
 
 ```
+

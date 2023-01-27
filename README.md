@@ -1,10 +1,12 @@
-# CIO Portfolio Dashboard System Web 
+# Angular Base Template
 
 ### Built With
 
 This section list frameworks/libraries used to in project.
 
 * [Angular](https://angular.io/) version 14.0.4
+* [Tailwindcss](https://tailwindcss.com/) version 3.1.4
+* [Daisyui](https://daisyui.com/) version 2.19.0
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

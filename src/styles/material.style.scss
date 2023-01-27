@@ -1,0 +1,11 @@
+@use '@angular/material' as mat;
+@import '@angular/material/theming';
+
+$angular-base-template-typography: mat-typography-config(
+  $font-family: 'DBHeaventCond'
+);
+
+@include mat.core($angular-base-template-typography);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: "DBHeaventCond", sans-serif; }

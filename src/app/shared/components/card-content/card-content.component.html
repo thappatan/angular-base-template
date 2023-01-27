@@ -1,0 +1,37 @@
+<div class="card w-full bg-base-100 shadow-xl">
+  <div class="card-body">
+    <ng-content select="[header]"></ng-content>
+
+    <ng-content select="[content]"></ng-content>
+
+    <ng-template
+      [ngIf]="action.showAction && !action.customActions"
+      [ngIfElse]="customActionsContent"
+    >
+      <div class="card-actions justify-center flex my-2 gap-9">
+        <button
+          type="submit"
+          [disabled]="action.submitButton!.disable"
+          [ngClass]="action.submitButton!.classes || ''"
+          class="btn btn-primary rounded-full capitalize text-lg w-[130px]"
+          (click)="onSubmit()"
+        >
+          {{ action.submitButton!.title }}
+        </button>
+        <button
+          type="reset"
+          [disabled]="action.cancelButton!.disable"
+          [ngClass]="action.cancelButton!.classes || ''"
+          class="btn btn-outline bg-white rounded-full capitalize text-lg w-[130px]"
+          (click)="onCancel()"
+        >
+          {{ action.cancelButton!.title }}
+        </button>
+      </div>
+    </ng-template>
+
+    <ng-template #customActionsContent>
+      <ng-content select="[actions]"></ng-content>
+    </ng-template>
+  </div>
+</div>

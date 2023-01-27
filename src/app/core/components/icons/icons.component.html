@@ -1,0 +1,6 @@
+<ng-template ngFor let-icon [ngForOf]="iconsPack">
+  <ng-template [ngIf]="icon.name === name" >
+    <div [class]="class" [innerHTML]="icon.svg | safeHtml">
+    </div>
+  </ng-template>
+</ng-template>

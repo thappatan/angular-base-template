@@ -1,0 +1,45 @@
+<input [checked]="modalState" type="checkbox" class="modal-toggle" />
+<div class="modal">
+  <ng-template
+    [ngIf]="!defaultOptionModal.useCustomContent"
+    [ngIfElse]="customContent"
+  >
+    <div [ngClass]="defaultOptionModal.contentClass || ''" class="modal-box">
+      <icon-core
+        *ngIf="defaultOptionModal.icon"
+        [class]="defaultOptionModal.iconClass || ''"
+        [name]="defaultOptionModal.icon"
+      ></icon-core>
+      <span
+        *ngIf="defaultOptionModal.title"
+        [ngClass]="defaultOptionModal.titleClass || ''"
+        class="font-semibold"
+        >{{ defaultOptionModal.title }}</span
+      >
+      <div class="divider h-0"></div>
+      <p
+        [ngClass]="defaultOptionModal.detailClass || ''"
+        *ngIf="defaultOptionModal.detail"
+      >
+        {{ defaultOptionModal.detail }}
+      </p>
+      <div class="modal-action">
+        <button
+          (click)="onOkClick()"
+          class="btn"
+          [ngClass]="defaultOptionModal.okButton?.class || ''"
+        >
+          {{ defaultOptionModal.okButton?.title }}
+        </button>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template #customContent>
+    <div [ngClass]="defaultOptionModal.contentClass || ''" class="modal-box">
+      <ng-template
+        [ngTemplateOutlet]="defaultOptionModal.customContent || null"
+      >
+      </ng-template>
+    </div>
+  </ng-template>
+</div>

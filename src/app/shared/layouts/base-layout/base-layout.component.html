@@ -1,0 +1,17 @@
+<core-modal-component></core-modal-component>
+
+<drawer-core [userProfile]="userProfile">
+  <div class="flex flex-col h-full">
+    <!-- navbar -->
+    <navbar-core
+      [userProfile]="userProfile"
+      class="shrink-0 z-10"
+    ></navbar-core>
+    <!-- content -->
+    <div class="flex-1 p-4 md:p-12 lg:p-16 overflow-y-auto bg-base-300">
+      <ng-content select="router-outlet"></ng-content>
+    </div>
+    <!-- footer -->
+    <footer-core class="shrink-0 z-10"> </footer-core>
+  </div>
+</drawer-core>

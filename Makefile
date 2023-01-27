@@ -1,4 +1,5 @@
 PROJECT_NAME = angular-base-template
+REGISTRY =
 
 .PHONY: help install run pack server
 
@@ -11,16 +12,28 @@ install: ## Install dependencies
 run: ## Run application
 	npm run start
 
-pack: ## Build and pack application
+dev: ## Develop application
+	npm run dev
+
+build: ## Build and pack application
 	npm run build
 
 server: ## Build and run application with lite server
 	npm run build:w&
 	sleep 5; npm run local
 
-docker-pack: ## Build and pack application with docker image
-	docker build -t $(PROJECT_NAME) .
+docker-build: ## Build and pack application with docker image
+	docker build -t $(REGISTRY) .
 
 docker-run: ## Run application with docker container
-	docker run --name $(PROJECT_NAME)-container -d -p 8888:80 $(PROJECT_NAME)
+	docker run --name $(PROJECT_NAME)-container -d -p 8888:80 $(REGISTRY)
 
+docker-push: ## Push docker image to registry
+	docker push $(REGISTRY)
+
+release: ## Bump App Version without auto push to repository
+	npm run release:dry
+
+push: ## Push release
+	git pull
+	git push --follow-tags

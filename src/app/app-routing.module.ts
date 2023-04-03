@@ -21,7 +21,9 @@ const routes: Routes = [
 
 const config: ExtraOptions = {
   useHash: false,
+  initialNavigation: 'enabledBlocking',
 };
+
 @NgModule({
   imports: [RouterModule.forRoot(routes, config)],
   exports: [RouterModule],

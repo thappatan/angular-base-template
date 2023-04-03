@@ -1,10 +1,10 @@
-# Angular Base Template
+# Angular Base Prerender SSR Template
 
 ### Built With
 
 This section list frameworks/libraries used to in project.
 
-* [Angular](https://angular.io/) version 14.0.4
+* [Angular](https://angular.io/) version 15.1.0
 * [Tailwindcss](https://tailwindcss.com/) version 3.1.4
 * [Daisyui](https://daisyui.com/) version 2.19.0
 
@@ -49,15 +49,11 @@ _If you want to run application._
 
 To run application, open a terminal window and run the following command
 ```sh
-ng serve
-```
-<b>Or run by npm command</b>
-```sh
-npm run start
+npm run serve:ssr
 ```
 <b>Or run by [Makefile](https://makefiletutorial.com/) command</b>
 ```sh
-make run
+make dev
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>

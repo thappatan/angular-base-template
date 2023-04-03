@@ -19,7 +19,7 @@ export class AppComponent {
 
   constructor(
     protected userProfileService: UserProfileService,
-    protected menuService: MenuService
+    protected menuService: MenuService,
   ) {
     console.info('Version :', environment.APP_VERSION);
 
@@ -35,4 +35,5 @@ export class AppComponent {
     menuService.setMenuList(menuListDefault);
     userProfileService.setUserProfile(userProfileMock);
   }
+
 }

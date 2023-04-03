@@ -1,27 +1,29 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { NgxSpinnerModule } from 'ngx-spinner';
 import { CoreModule } from '@core/core.module';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 import { RedirectHttpInterceptor } from '@core/interceptor/redirect-http.interceptor';
 
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent
+  ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgxSpinnerModule,
-    CoreModule
+    CoreModule,
+    NgxSpinnerModule
   ],
-  bootstrap: [AppComponent],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
@@ -29,5 +31,6 @@ import { RedirectHttpInterceptor } from '@core/interceptor/redirect-http.interce
       multi: true,
     },
   ],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

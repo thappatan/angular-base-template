@@ -15,7 +15,7 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2020",
+    "target": "ES2022",
     "module": "es2020",
     "esModuleInterop": true,
     "lib": [
@@ -23,13 +23,14 @@
       "dom"
     ],
     "paths": {
-      "@core/*":[
+      "@core/*": [
         "app/core/*"
       ],
-      "@shared/*":[
+      "@shared/*": [
         "app/shared/*"
       ]
-    }
+    },
+    "useDefineForClassFields": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

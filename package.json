@@ -1,6 +1,7 @@
 {
   "name": "angular-base-template",
   "version": "0.0.1-SNAPSHOT",
+  "description": "Angular Base Template Description",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

@@ -1,5 +1,6 @@
 {
   "name": "angular-base-template",
+  "description": "Angular Base Template Description",
   "version": "0.0.1-SNAPSHOT",
   "scripts": {
     "build:w": "ng build --watch",
